@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CulinaryGuideApp.Views.LoginPage"
+             Title="登录"
+             BackgroundColor="#f4f4f4">
+    <Grid RowDefinitions="*,Auto,Auto,Auto,*" Padding="30" RowSpacing="20">
+        <VerticalStackLayout Grid.Row="1" Spacing="15">
+            <Label Text="欢迎回来" FontSize="24" FontAttributes="Bold" TextColor="#333" HorizontalOptions="Center" />
+            <Border Padding="10,0,10,0" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 8">
+                <Entry x:Name="UsernameEntry"
+                       Placeholder="用户名"
+                       TextColor="#333"
+                       PlaceholderColor="#aaa"
+                       FontSize="16"
+                       HeightRequest="45"
+                       Visual="Default" />
+            </Border>
+            <Border Padding="10,0,10,0" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 8">
+                <Entry x:Name="PasswordEntry"
+                       Placeholder="密码"
+                       IsPassword="True"
+                       TextColor="#333"
+                       PlaceholderColor="#aaa"
+                       FontSize="16"
+                       HeightRequest="45"
+                       Visual="Default" />
+            </Border>
+        </VerticalStackLayout>
+
+        <Button Grid.Row="2"
+                Text="登录"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="#512BD4"
+                HeightRequest="50"
+                CornerRadius="8" />
+
+        <Button Grid.Row="3"
+                Text="注册"
+                FontSize="16"
+                TextColor="#512BD4"
+                BackgroundColor="Transparent"
+                BorderColor="#512BD4"
+                BorderWidth="1"
+                HeightRequest="45"
+                CornerRadius="8" />
+
+        <Label x:Name="MessageLabel"
+               Grid.Row="4"
+               TextColor="Red"
+               FontSize="14"
+               HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
